@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Homework</string>
+    <string name="default_text">some text</string>
+    <string name="call">Call</string>
+    <string name="send">Send</string>
+    <string name="app">APP</string>
+    <string name="message_text">I copied this code from Roman Cherevko\'s homework</string>
+    <string name="phone_to_call">tel:0663379780</string>
+</resources>
