@@ -1,11 +1,29 @@
 <resources>
 
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!--
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item> -->
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="DefaultBtn">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_margin">@dimen/hw_default_margin</item>
+        <item name="layout_columnWeight">1</item>
+        <item name="layout_rowWeight">1</item>
+        <item name="android:text">@string/default_text</item>
+        <item name="android:background">@color/hw_grey</item>
+    </style>
+
+    <style name="BarBtn">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_margin">@dimen/hw_menu_margin</item>
+        <item name="layout_row">0</item>
+        <item name="layout_rowWeight">1</item>
+        <item name="android:text">@string/default_text</item>
+        <item name="android:background">@color/hw_light_grey</item>
     </style>
 
 </resources>

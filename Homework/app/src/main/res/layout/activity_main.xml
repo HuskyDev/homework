@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="hm.cources.homework_1.MainActivity">
+    tools:context="android.cources.homework.MainActivity">
 
     <android.support.v7.widget.GridLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -19,188 +19,105 @@
         android:layout_weight="1">
 
         <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:background="@color/hw_grey"
-            android:text="@string/default_text"
-            app:layout_column="0"
-            app:layout_columnWeight="1"
             app:layout_row="0"
-            app:layout_rowWeight="1"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/hw_default_margin"/>
+            app:layout_column="0"
+            style="@style/DefaultBtn" />
 
         <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
             app:layout_row="0"
             app:layout_column="1"
-            android:background="@color/hw_grey"
-            android:text="@string/default_text"
-            android:layout_margin="@dimen/hw_default_margin" />
+            style="@style/DefaultBtn" />
 
         <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
             app:layout_row="0"
             app:layout_column="2"
-            android:background="@color/hw_grey"
-            android:text="@string/default_text"
-            android:layout_margin="@dimen/hw_default_margin" />
+            style="@style/DefaultBtn" />
 
         <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:background="@color/hw_grey"
-            android:text="@string/default_text"
-            app:layout_column="0"
-            app:layout_columnWeight="1"
             app:layout_row="1"
-            app:layout_rowWeight="1"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/hw_default_margin"/>
+            app:layout_column="0"
+            style="@style/DefaultBtn" />
 
         <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
             app:layout_row="1"
             app:layout_column="1"
-            android:background="@color/hw_grey"
-            android:text="@string/default_text"
-            android:layout_margin="@dimen/hw_default_margin" />
+            style="@style/DefaultBtn" />
 
         <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
             app:layout_row="1"
             app:layout_column="2"
-            android:background="@color/hw_grey"
-            android:text="@string/default_text"
-            android:layout_margin="@dimen/hw_default_margin" />
+            style="@style/DefaultBtn" />
 
         <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:background="@color/hw_grey"
-            android:text="@string/default_text"
-            app:layout_column="0"
-            app:layout_columnWeight="1"
             app:layout_row="2"
-            app:layout_rowWeight="1"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/hw_default_margin"/>
+            app:layout_column="0"
+            style="@style/DefaultBtn" />
 
         <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
             app:layout_row="2"
             app:layout_column="1"
-            android:background="@color/hw_grey"
-            android:text="@string/default_text"
-            android:layout_margin="@dimen/hw_default_margin" />
+            style="@style/DefaultBtn" />
 
         <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
             app:layout_row="2"
             app:layout_column="2"
-            android:background="@color/hw_grey"
-            android:text="@string/default_text"
-            android:layout_margin="@dimen/hw_default_margin" />
+            style="@style/DefaultBtn" />
 
         <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:background="@color/hw_grey"
-            android:text="@string/default_text"
-            app:layout_column="0"
-            app:layout_columnWeight="1"
             app:layout_row="3"
-            app:layout_rowWeight="1"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/hw_default_margin"/>
+            app:layout_column="0"
+            style="@style/DefaultBtn" />
 
         <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
             app:layout_row="3"
             app:layout_column="1"
-            android:background="@color/hw_grey"
-            android:text="@string/default_text"
-            android:layout_margin="@dimen/hw_default_margin" />
+            style="@style/DefaultBtn" />
 
         <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
             app:layout_row="3"
             app:layout_column="2"
-            android:background="@color/hw_grey"
-            android:text="@string/default_text"
-            android:layout_margin="@dimen/hw_default_margin" />
+            style="@style/DefaultBtn" />
+
     </android.support.v7.widget.GridLayout>
 
-    <android.support.v7.widget.GridLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    <android.support.v7.widget.GridLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="@color/hw_black"
+        app:rowCount="1"
         app:columnCount="3"
-        app:orientation="horizontal"
-        app:rowCount="1">
+        app:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/call_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/hw_menu_margin"
-            android:background="#D6D7D7"
+            android:tag="@string/call"
             android:contentDescription="@string/call"
             android:src="@android:drawable/ic_menu_call"
+            app:layout_row="0"
             app:layout_column="0"
             app:layout_columnWeight="2"
-            app:layout_row="0"
-            app:layout_rowWeight="1" />
+            style="@style/BarBtn" />
 
         <Button
             android:id="@+id/app_btn"
-            android:layout_width="wrap_content"
+            android:tag="@string/app"
             android:layout_height="@dimen/hw_menu_btn_htight"
-            android:layout_margin="@dimen/hw_menu_margin"
-            android:background="@color/hw_light_grey"
             android:text="@string/app"
+            app:layout_row="0"
             app:layout_column="1"
             app:layout_columnWeight="1"
-            app:layout_row="0"
-            app:layout_rowWeight="1" />
+            style="@style/BarBtn" />
 
         <ImageButton
             android:id="@+id/send_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/hw_menu_margin"
-            android:background="@color/hw_light_grey"
+            android:tag="@string/send"
             android:contentDescription="@string/send"
             android:src="@android:drawable/ic_menu_send"
             app:layout_column="2"
             app:layout_columnWeight="2"
-            app:layout_row="0"
-            app:layout_rowWeight="1" />
+            style="@style/BarBtn" />
     </android.support.v7.widget.GridLayout>
 
 </LinearLayout>

@@ -1,5 +1,8 @@
 <resources>
     <dimen name="hw_default_margin">2dp</dimen>
+    <dimen name="hw_app_padding">16dp</dimen>
     <dimen name="hw_menu_margin">5dp</dimen>
     <dimen name="hw_menu_btn_htight">36dp</dimen>
+    <dimen name="hw_filter_field_height">40dp</dimen>
+    <dimen name="hw_app_btn_height">40dp</dimen>
 </resources>

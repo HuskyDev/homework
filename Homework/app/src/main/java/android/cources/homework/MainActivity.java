@@ -9,6 +9,13 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    private final String DEFAULT_PHONE = "tel:";
+    private final String DEFAULT_MESSAGE = "";
+    private final String DEFAULT_MESSAGE_TYPE = "text/plain";
+    private final String CASE_CALL_TAG = "Call";
+    private final String CASE_APP_TAG = "APP";
+    private final String CASE_SEND_TAG = "Send";
+
     private Context context;
 
     @Override
@@ -21,31 +28,32 @@ public class MainActivity extends AppCompatActivity {
         View btn_app = findViewById(R.id.app_btn);
         View btn_send = findViewById(R.id.send_btn);
 
-        btn_call.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse(getResources().getString(R.string.phone_to_call)));
-                startActivity(intent);
-            }
-        });
-
-        btn_app.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(context, AppsActivity.class));
-            }
-        });
-
-        btn_send.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.message_text));
-                intent.setType("text/plain");
-                startActivity(intent);
-            }
-        });
+        btn_call.setOnClickListener(clickListener);
+        btn_app.setOnClickListener(clickListener);
+        btn_send.setOnClickListener(clickListener);
     }
 
+    private View.OnClickListener clickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent;
+
+            switch (v.getTag().toString()) {
+                case CASE_CALL_TAG:
+                    intent = new Intent(Intent.ACTION_DIAL);
+                    intent.setData(Uri.parse(DEFAULT_PHONE));
+                    startActivity(intent);
+                    break;
+                case CASE_APP_TAG:
+                    startActivity(new Intent(context, AppsActivity.class));
+                    break;
+                case CASE_SEND_TAG:
+                    intent = new Intent(Intent.ACTION_SEND);
+                    intent.putExtra(Intent.EXTRA_TEXT, DEFAULT_MESSAGE);
+                    intent.setType(DEFAULT_MESSAGE_TYPE);
+                    startActivity(intent);
+                    break;
+            }
+        }
+    };
 }
