@@ -1,13 +1,19 @@
 package android.cources.homework;
 
-import android.content.Context;
+import android.app.FragmentManager;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.cources.homework.adapters.GridAdapter;
+import android.cources.homework.core.CoreActivity;
+import android.cources.homework.structure.AppExtStructure;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.GridView;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.List;
+
+public class MainActivity extends CoreActivity {
 
     private final String DEFAULT_PHONE = "tel:";
     private final String DEFAULT_MESSAGE = "";
@@ -16,14 +22,17 @@ public class MainActivity extends AppCompatActivity {
     private final String CASE_APP_TAG = "APP";
     private final String CASE_SEND_TAG = "Send";
 
-    private Context context;
+    private FragmentManager fragmentManager;
+    private GridAdapter gridAdapter;
+    private GridView gridView;
+    private List<AppExtStructure> apps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        context = getApplicationContext();
+        gridView = (GridView) findViewById(R.id.gridView);
         View btn_call = findViewById(R.id.call_btn);
         View btn_app = findViewById(R.id.app_btn);
         View btn_send = findViewById(R.id.send_btn);
@@ -31,6 +40,16 @@ public class MainActivity extends AppCompatActivity {
         btn_call.setOnClickListener(clickListener);
         btn_app.setOnClickListener(clickListener);
         btn_send.setOnClickListener(clickListener);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        apps = createAppsList(packageManager.getInstalledApplications(PackageManager.GET_META_DATA),
+                true);
+        gridAdapter = new GridAdapter(this, apps);
+        gridView.setAdapter(gridAdapter);
     }
 
     private View.OnClickListener clickListener = new View.OnClickListener() {

@@ -9,75 +9,19 @@
     tools:context="android.cources.homework.MainActivity">
 
     <android.support.v7.widget.GridLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:columnCount="3"
-        app:rowCount="4"
+        app:columnCount="1"
+        app:rowCount="1"
         app:orientation="horizontal"
         android:background="@color/hw_white"
         android:layout_weight="1">
-
-        <Button
-            app:layout_row="0"
-            app:layout_column="0"
-            style="@style/DefaultBtn" />
-
-        <Button
-            app:layout_row="0"
-            app:layout_column="1"
-            style="@style/DefaultBtn" />
-
-        <Button
-            app:layout_row="0"
-            app:layout_column="2"
-            style="@style/DefaultBtn" />
-
-        <Button
-            app:layout_row="1"
-            app:layout_column="0"
-            style="@style/DefaultBtn" />
-
-        <Button
-            app:layout_row="1"
-            app:layout_column="1"
-            style="@style/DefaultBtn" />
-
-        <Button
-            app:layout_row="1"
-            app:layout_column="2"
-            style="@style/DefaultBtn" />
-
-        <Button
-            app:layout_row="2"
-            app:layout_column="0"
-            style="@style/DefaultBtn" />
-
-        <Button
-            app:layout_row="2"
-            app:layout_column="1"
-            style="@style/DefaultBtn" />
-
-        <Button
-            app:layout_row="2"
-            app:layout_column="2"
-            style="@style/DefaultBtn" />
-
-        <Button
-            app:layout_row="3"
-            app:layout_column="0"
-            style="@style/DefaultBtn" />
-
-        <Button
-            app:layout_row="3"
-            app:layout_column="1"
-            style="@style/DefaultBtn" />
-
-        <Button
-            app:layout_row="3"
-            app:layout_column="2"
-            style="@style/DefaultBtn" />
-
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="3"
+            android:gravity="center"/>
     </android.support.v7.widget.GridLayout>
 
     <android.support.v7.widget.GridLayout

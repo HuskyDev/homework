@@ -3,6 +3,7 @@
     <dimen name="hw_app_padding">16dp</dimen>
     <dimen name="hw_menu_margin">5dp</dimen>
     <dimen name="hw_menu_btn_htight">36dp</dimen>
+    <dimen name="hw_home_apps_padding">28dp</dimen>
     <dimen name="hw_filter_field_height">40dp</dimen>
     <dimen name="hw_app_btn_height">40dp</dimen>
 </resources>

@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/gridViewItem"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingBottom="@dimen/hw_app_padding"
-    android:orientation="vertical">
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/hw_home_apps_padding"
+    android:paddingBottom="@dimen/hw_home_apps_padding">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/gridImageButton"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/hw_app_btn_height"
         android:background="@android:color/transparent"
@@ -21,7 +19,7 @@
         app:srcCompat="@mipmap/ic_launcher_round" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/gridTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center" />
